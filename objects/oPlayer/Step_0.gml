@@ -1,5 +1,6 @@
 
 
+// ... (Your animation and room transition code)
 // 1. Calculate intended movement
 var move = keyboard_check(vk_right) - keyboard_check(vk_left);
 hsp = move * walk_speed;
