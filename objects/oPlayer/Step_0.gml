@@ -1,57 +1,44 @@
-x_speed = 0; // reset horizontal speed 
 
-y_speed += .5; // add gravity to y_speed
 
-move = keyboard_check(vk_right) - keyboard_check(vk_left);
-
+// 1. Calculate intended movement
+var move = keyboard_check(vk_right) - keyboard_check(vk_left);
 hsp = move * walk_speed;
 
-if keyboard_check(vk_right) {  // if the right arrow key is pressed
+// 2. Apply Gravity
+y_speed += 0.5;
 
-    x_speed = walk_speed;  // set the horizontal speed to heidi's walk_speed
-	
-} else if keyboard_check(vk_left) {  // otherwise, if the left arrow key is pressed
-
-    x_speed = -walk_speed;  // set the horizontal speed to negative heidi's walk_speed, making her move left
-	
-}
-
-move_and_collide(x_speed, y_speed, oSolid);
-
-if (place_meeting(x, y + 1, oSolid)) { // if heidi is on the ground
-
-    if (keyboard_check_pressed(vk_up)) { // and the up arrow key is pressed
-
-        y_speed = -10; // make heidi jump by setting her y_speed to a negative value
-
-    } else { // otherwise, if heidi is on the ground but not jumping
-
-        y_speed = 0; // set her y_speed to 0 so she doesn't fall through the ground
-
+// 3. Grounded Check & Jump
+var on_ground = place_meeting(x, y + 1, oSolid);
+if (on_ground) {
+    if (keyboard_check_pressed(vk_up)) {
+        y_speed = -10;
+    } else {
+        y_speed = 0;
     }
-
 }
 
-if (place_meeting(x, y, oDoor))
-room_goto_next()
+// 4. THE FIX: Collision & Movement
+// Using 'temp' variables ensures we don't get stuck mid-frame
+move_and_collide(hsp, y_speed, oSolid);
 
-if keyboard_check(vk_right) {
-
-    x_speed = walk_speed; 
-
-    image_xscale = 1; // flip heidi's sprite so she faces right
-
-} else if keyboard_check(vk_left) {
-
-    x_speed = -walk_speed; 
-
-    image_xscale = -1; // reset her sprite so she faces left
-
+// 4. SPECIAL BLOCK INTERACTION (Fake Blocks)
+// Check if we are touching ANY fake block
+if (place_meeting(x, y + 1, Fake)) {
+    // Tell EVERY instance of "Fake" in the room to start fading
+    with (Fake) {
+        is_fading = true;
+    }
 }
 
-if (hsp != 0) {
-    sprite_index = sPlayerRun;  // Change to running sprite
-    image_xscale = sign(hsp);       // Flip sprite to face movement direction
+// 5. THE FIX: Animation (Only flip if we are actually moving)
+if (move != 0) {
+    image_xscale = move; // Using 'move' (1 or -1) is safer than 'hsp'
+    sprite_index = sPlayerRun;
 } else {
-    sprite_index = sPlayerIdle; // Change back to idle
+    sprite_index = sPlayerIdle;
+}
+
+// 7. ROOM TRANSITION
+if (place_meeting(x, y, oDoor)) {
+    room_goto_next();
 }
