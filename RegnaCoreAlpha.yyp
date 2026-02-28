@@ -22,6 +22,7 @@
   },
   "name":"RegnaCoreAlpha",
   "resources":[
+    {"id":{"name":"ahdihdbkusy","path":"fonts/ahdihdbkusy/ahdihdbkusy.yy",},},
     {"id":{"name":"Fake","path":"objects/Fake/Fake.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
     {"id":{"name":"oFire","path":"objects/oFire/oFire.yy",},},
@@ -38,6 +39,7 @@
     {"id":{"name":"oUnderBlock","path":"objects/oUnderBlock/oUnderBlock.yy",},},
     {"id":{"name":"oUnderBlockM","path":"objects/oUnderBlockM/oUnderBlockM.yy",},},
     {"id":{"name":"oUnderFake","path":"objects/oUnderFake/oUnderFake.yy",},},
+    {"id":{"name":"ff","path":"rooms/ff/ff.yy",},},
     {"id":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
     {"id":{"name":"Room1_2","path":"rooms/Room1_2/Room1_2.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
@@ -65,9 +67,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"ff","path":"rooms/ff/ff.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
     {"roomId":{"name":"Room1_2","path":"rooms/Room1_2/Room1_2.yy",},},
+    {"roomId":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
