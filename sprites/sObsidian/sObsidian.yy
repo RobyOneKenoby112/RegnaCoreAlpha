@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"sObsidian",
   "bboxMode":0,
-  "bbox_bottom":240,
+  "bbox_bottom":15,
   "bbox_left":0,
-  "bbox_right":240,
+  "bbox_right":15,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":241,
+  "height":16,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"5bff28cd-fcf0-44cd-82ea-77470dcaed39","blendMode":0,"displayName":"default","isLocked":false,"name":"5bff28cd-fcf0-44cd-82ea-77470dcaed39","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":241,
+  "width":16,
 }
