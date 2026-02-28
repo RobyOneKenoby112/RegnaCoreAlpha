@@ -18,6 +18,11 @@ if (on_ground) {
     }
 }
 
+if ((place_meeting(x, y, oSpike) || place_meeting(x, y, oSpike1) || place_meeting(x, y, oFire)) )
+   room_restart();
+   
+
+
 // 4. THE FIX: Collision & Movement
 // Using 'temp' variables ensures we don't get stuck mid-frame
 move_and_collide(hsp, y_speed, oSolid);

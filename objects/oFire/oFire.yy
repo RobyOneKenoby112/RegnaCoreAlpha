@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oCore",
+  "%Name":"oFire",
   "eventList":[],
   "managed":true,
-  "name":"oCore",
+  "name":"oFire",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCore",
-    "path":"sprites/sCore/sCore.yy",
+    "name":"sFire",
+    "path":"sprites/sFire/sFire.yy",
   },
   "spriteMaskId":null,
   "visible":true,

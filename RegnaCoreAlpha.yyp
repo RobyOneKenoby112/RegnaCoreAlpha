@@ -23,8 +23,8 @@
   "name":"RegnaCoreAlpha",
   "resources":[
     {"id":{"name":"Fake","path":"objects/Fake/Fake.yy",},},
-    {"id":{"name":"oCore","path":"objects/oCore/oCore.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
+    {"id":{"name":"oFire","path":"objects/oFire/oFire.yy",},},
     {"id":{"name":"oGround","path":"objects/oGround/oGround.yy",},},
     {"id":{"name":"oGroundFake","path":"objects/oGroundFake/oGroundFake.yy",},},
     {"id":{"name":"oObsidian","path":"objects/oObsidian/oObsidian.yy",},},
@@ -44,8 +44,8 @@
     {"id":{"name":"sBackground1","path":"sprites/sBackground1/sBackground1.yy",},},
     {"id":{"name":"sBackground2","path":"sprites/sBackground2/sBackground2.yy",},},
     {"id":{"name":"sBackgroundCore","path":"sprites/sBackgroundCore/sBackgroundCore.yy",},},
-    {"id":{"name":"sCore","path":"sprites/sCore/sCore.yy",},},
     {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},},
+    {"id":{"name":"sFire","path":"sprites/sFire/sFire.yy",},},
     {"id":{"name":"sGround","path":"sprites/sGround/sGround.yy",},},
     {"id":{"name":"sGroundFake","path":"sprites/sGroundFake/sGroundFake.yy",},},
     {"id":{"name":"sObby","path":"sprites/sObby/sObby.yy",},},
@@ -65,9 +65,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1_2","path":"rooms/Room1_2/Room1_2.yy",},},
-    {"roomId":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
+    {"roomId":{"name":"Room1_2","path":"rooms/Room1_2/Room1_2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
