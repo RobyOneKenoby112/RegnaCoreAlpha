@@ -2,14 +2,18 @@ x_speed = 0; // reset horizontal speed
 
 y_speed += .5; // add gravity to y_speed
 
+move = keyboard_check(vk_right) - keyboard_check(vk_left);
+
+hsp = move * walk_speed;
+
 if keyboard_check(vk_right) {  // if the right arrow key is pressed
 
     x_speed = walk_speed;  // set the horizontal speed to heidi's walk_speed
-
+	
 } else if keyboard_check(vk_left) {  // otherwise, if the left arrow key is pressed
 
     x_speed = -walk_speed;  // set the horizontal speed to negative heidi's walk_speed, making her move left
-
+	
 }
 
 move_and_collide(x_speed, y_speed, oSolid);
@@ -43,4 +47,11 @@ if keyboard_check(vk_right) {
 
     image_xscale = -1; // reset her sprite so she faces left
 
+}
+
+if (hsp != 0) {
+    sprite_index = sPlayerRun;  // Change to running sprite
+    image_xscale = sign(hsp);       // Flip sprite to face movement direction
+} else {
+    sprite_index = sPlayerIdle; // Change back to idle
 }
