@@ -48,3 +48,7 @@ if (move != 0) {
 if (place_meeting(x, y, oDoor)) {
     room_goto_next();
 }
+
+if (keyboard_check_pressed(vk_escape) || keyboard_check_pressed(ord("R"))) {
+    room_goto(Room1);
+}
