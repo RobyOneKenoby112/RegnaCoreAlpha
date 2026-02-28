@@ -1,3 +1,5 @@
-movement_speed=1;
+x_speed = 0; 
 
-grav = .6;
+y_speed = 0; 
+
+walk_speed = 3; 
